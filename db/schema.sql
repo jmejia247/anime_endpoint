@@ -10,3 +10,4 @@ CREATE TABLE anime (
     name TEXT NOT NULL,
     release INT
 );
+
