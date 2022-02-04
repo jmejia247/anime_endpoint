@@ -10,6 +10,7 @@ INSERT INTO anime (name, release) VALUES
 
 INSERT INTO reviews (anime_id, reviewer, title, content, rating) VALUES 
 ('1', 'Jose', 'overwhelming', 'watched one piece when i was young, thought i could catch up...', 4),
+('1', 'Melissa', 'overwhelming', 'never even watched it', 0),
 ('2', 'Jose', 'Nostalgia', 'one of my first animes, purely nostalgia', 5),
 ('3', 'Jose', 'new', 'definitely one of the best new animes', 4), 
 ('4', 'Not Jose', 'oldie but goldie', '1, 2, 3, 4, lets go', 5);

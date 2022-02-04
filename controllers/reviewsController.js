@@ -1,9 +1,12 @@
 const express = require('express');
-const reviews = express.Router();
+const reviews = express.Router({ mergeParams: true });
 const { getAllReviews, getReview, newReview, updateReview, deleteReview } = require('../queries/reviews')
 
+// localhost:8080/anime/:animeId/reviews/
 reviews.get('/', async (req, res) => {
-    const reviews = await getAllReviews();
+    const { animeId } = req.params;
+    console.log(animeId)
+    const reviews = await getAllReviews(animeId);
     if (reviews.length) {
         res.status(200).json(reviews)
     } else {

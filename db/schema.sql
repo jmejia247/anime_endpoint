@@ -11,3 +11,13 @@ CREATE TABLE anime (
     release INT
 );
 
+CREATE TABLE reviews (
+    id SERIAL PRIMARY KEY,
+    reviewer TEXT NOT NULL,
+    title TEXT,
+    content TEXT NOT NULL,
+    rating INT,
+    CHECK (rating >= 0 AND rating <= 5),
+    anime_id INTEGER REFERENCES anime (id)
+    ON DELETE CASCADE
+)
